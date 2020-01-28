@@ -1,0 +1,126 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage[section]{placeins}
+\usepackage{calc}
+\usepackage{hyperref} 
+\usepackage{amsmath}
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\graphicspath{{./images/}}
+\title{Bruin Formula Racing Fall 2019 Project Specification}
+\author{Ken Suzuki, Rahul Salvi, Patrick Chau}
+\date{Last Updated: 9/22/2019}
+\begin{document}
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+\maketitle
+
+\section{ Introduction }
+
+The goal of this project is to develop a smart relay and fuse box. This box shall have indicators detailing the status of each fuse (blown or unblown), as well as communicate over the CAN bus to the ECU, following the AEMnet specification. In addition, the box shall also house each relay connected to actuators on the car, the full list of which will be detailed in the following sections. The control for the relays will be provided from the ECU.
+\newline
+
+\noindent Skills which will be gained from participating in this project:
+ \begin{description}
+    \item[$\cdot$] PCB design
+    \item[$\cdot$] Microcontroller Basics
+    \item[$\cdot$] An understanding of the CAN Bus
+    \item[$\cdot$] Finding vendors and intelligently picking out parts based on use case
+    \item[$\cdot$] Gaining familiarity with electronics on the vehicle
+\end{description}
+
+
+
+\section{ Main Requirements }
+There are several functionalities that we wish to achieve with this project. These are the overarching goals for the project and ideally we achieve all of them.
+\begin{enumerate}
+	\item The relay box must have be able to handle 12V.
+    \item The relay box must have capacity to contain 12 fuses.
+    \item The relay box must contain 7 relays which can be replaced.
+    \item Fuses must be easily removable.
+    \item The box must be able to connect to the CAN bus.
+    \item LEDs must be visible on the outside of the box to indicate whether or not each fuse is blown. LEDs will be off when fuse is okay. LEDs will be on when the fuse is blown and continuity is lost.
+    \item USB connection to the microcontroller (if one is to be used) should be easily accessible for programmability. 
+    \item The box should be able to be completely enclosed as well as opened for examination.
+    \item The box should have as minimal of a form factor as feasible.
+    \item All diagnostic information will be relayed over the CAN bus (without overlapping with already designated message IDs present on the bus).
+    \item The budget for the project is ideally \$100. 
+\end{enumerate} 
+
+\section{ Details }
+The reason for 12 fuses is that each one protects an electronic component from being damaged by a large current. The fuses used will just be typical automotive blade fuses so a part number for a fuse holder which can be soldered to a PCB will need to be found. The purposes for the fuses and their required current values are as follows.
+\begin{enumerate}
+    \item O2 sensor - 2A
+    \item Brake Light - 5A
+    \item ECU Power - 2A
+    \item Fuel Pump Power - 15A 
+    \item Fan Power - 15A
+    \item Injector Power - 5A
+    \item Coil Power - 10A
+    \item EFI Main Power - 20A
+    \item EFI Main Control - 3A
+    \item Flash Enable - signal, low current
+    \item 2 auxiliary fuses \newline
+\end{enumerate} 
+
+\noindent Additionally, 6 actuators need to be controlled, the names of which are as follows. Previously we used relays (P/N 1432772-1) that worked well but different control methods (Power FETs for example) can be used. 
+\begin{enumerate}
+    \item Fuel Pump - 12VDC, 30A
+    \item Fan - 12VDC, 30A
+    \item Injector - 12VDC, 30A
+    \item Coil - 12VDC, 30A
+    \item EFI Main - 12VDC, 30A
+    \item Fuse Box Power - 12VDC, 30A
+    \item Starter Motor - 12VDC, 70A
+\end{enumerate} 
+
+\noindent Some things are not specified in this document but still need to be determined, such as how the box will pin out, what type of connectors are to be used, and specifically how the box will communicate over the CAN bus(both in hardware and in software). 
+
+\section{ Documentation and Softwares }
+Some softwares that can be used while doing this project. Information on usage can easily be found with a quick Google search, but download links are added for convenience:
+\begin{enumerate}
+    \item EagleCAD: Widely used EDA made by Autodesk, free for Students for 3 years unrestricted.\href{https://www.autodesk.com/products/eagle/overview}{Link}
+    \item KiCAD: Hobbyist level EDA, open source and completely free for everyone with full functionality. \href{http://kicad-pcb.org/}{Link}
+    \item Altium CircuitMaker: recently went free, professional level EDA. \href{https://circuitmaker.com/}{Link}
+    \item LTSpice: circuit simulation software, widely used in industry and a great software to know. Large library of components \href{https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html}{Link}
+    \item Arduino IDE: IDE made specifically for working with Arduino, has a good number of base libraries installed. Of course, you can always use your IDE of choice when coding. \href{https://www.arduino.cc/en/Main/Software}{Link}
+\end{enumerate} 
+
+\noindent Some documents which might be useful:
+\begin{enumerate}
+    \item Infinity ECU Manual: Inside this manual has example wiring schematics which shows how the relays should be connected together and how fuses should be put together. \href{https://www.aemelectronics.com/files/instructions/Infinity-ECU-Full-Manual.pdf}{Link}
+    \item AEMnet CAN Protocol: this is the specification for the CAN messages the ECU will send out. \href{https://www.arduino.cc/en/Main/Software}{Link}
+    \item Cooper-Bussmann mVEC: this is a product that's already produced and used that's very similar to what we're designing. Could be used to get ideas on implementation. \href{http://www.cooperindustries.com/content/public/en/bussmann/transportation/products/power_distribution/vehicle_electriccentersvec/multiplexed_vehicleelectricalcenter.html}{Link}
+\end{enumerate} 
+
+
+\section{ References }
+    Listed below are useful reference materials for self-study. Feel free to read through them when you have time and if you have any questions about something you read, feel free to reach out to us.  
+
+\begin{enumerate}
+    \item CAN Protocol Overview: For those unfamiliar with CAN, this is a good overview \href{https://www.kvaser.com/can-protocol-tutorial/}{Link}
+    \item CAN Protocol Specification: For those interested in knowing the ins and outs, you can read the specification straight from Bosch, the company which developed the CAN protocol. \href{http://esd.cs.ucr.edu/webres/can20.pdf}{Link}
+\end{enumerate} 
+
+\end{document}
