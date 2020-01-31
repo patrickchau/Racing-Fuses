@@ -1,0 +1,315 @@
+EESchema Schematic File Version 4
+LIBS:test_project-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5E31D32A
+P 1050 1850
+F 0 "#PWR0101" H 1050 1600 50  0001 C CNN
+F 1 "GND" H 1055 1677 50  0000 C CNN
+F 2 "" H 1050 1850 50  0001 C CNN
+F 3 "" H 1050 1850 50  0001 C CNN
+	1    1050 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1650 1050 1750
+$Comp
+L power:+12V #PWR0102
+U 1 1 5E31D656
+P 1050 1050
+F 0 "#PWR0102" H 1050 900 50  0001 C CNN
+F 1 "+12V" H 1065 1223 50  0000 C CNN
+F 2 "" H 1050 1050 50  0001 C CNN
+F 3 "" H 1050 1050 50  0001 C CNN
+	1    1050 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1050 1050 1200
+$Comp
+L Device:Battery BT1
+U 1 1 5E31D7E8
+P 1050 1450
+F 0 "BT1" H 1158 1496 50  0000 L CNN
+F 1 "Battery" H 1158 1405 50  0000 L CNN
+F 2 "" V 1050 1510 50  0001 C CNN
+F 3 "~" V 1050 1510 50  0001 C CNN
+	1    1050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E31D9C5
+P 1050 1200
+F 0 "#FLG0101" H 1050 1275 50  0001 C CNN
+F 1 "PWR_FLAG" V 1050 1328 50  0000 L CNN
+F 2 "" H 1050 1200 50  0001 C CNN
+F 3 "~" H 1050 1200 50  0001 C CNN
+	1    1050 1200
+	0    1    1    0   
+$EndComp
+Connection ~ 1050 1200
+Wire Wire Line
+	1050 1200 1050 1250
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E31D9FE
+P 1050 1750
+F 0 "#FLG0102" H 1050 1825 50  0001 C CNN
+F 1 "PWR_FLAG" V 1050 1878 50  0000 L CNN
+F 2 "" H 1050 1750 50  0001 C CNN
+F 3 "~" H 1050 1750 50  0001 C CNN
+	1    1050 1750
+	0    1    1    0   
+$EndComp
+Connection ~ 1050 1750
+Wire Wire Line
+	1050 1750 1050 1850
+Text Label 1050 1150 2    50   ~ 0
+12V
+Text Label 1050 1700 2    50   ~ 0
+GND
+$Comp
+L Transistor_FET:IRLB8721PBF Q?
+U 1 1 5E32059E
+P 8300 2550
+F 0 "Q?" H 8505 2596 50  0000 L CNN
+F 1 "IRLB8721PBF" H 8505 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8550 2475 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/irlb8721pbf.pdf?fileId=5546d462533600a40153566056732591" H 8300 2550 50  0001 L CNN
+	1    8300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_CAN_LIN:SN65HVD232 U?
+U 1 1 5E332ABF
+P 1800 3450
+F 0 "U?" H 1250 3250 50  0000 C CNN
+F 1 "SN65HVD232" H 1200 3150 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1800 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn65hvd230.pdf" H 1700 3850 50  0001 C CNN
+	1    1800 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3350 1250 3350
+Wire Wire Line
+	1400 3450 1250 3450
+Text GLabel 1250 3350 0    50   Input ~ 0
+CAN_TX
+Text GLabel 1250 3450 0    50   Input ~ 0
+CAN_RX
+Wire Wire Line
+	1800 2700 1650 2700
+Wire Wire Line
+	1800 2700 1950 2700
+Connection ~ 1800 2700
+Text GLabel 1650 2700 0    50   Input ~ 0
+3.3V
+$Comp
+L pspice:CAP C?
+U 1 1 5E333760
+P 2200 2700
+F 0 "C?" V 2515 2700 50  0000 C CNN
+F 1 "CAP" V 2424 2700 50  0000 C CNN
+F 2 "" H 2200 2700 50  0001 C CNN
+F 3 "~" H 2200 2700 50  0001 C CNN
+	1    2200 2700
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1950 2700
+Wire Wire Line
+	1950 2700 2000 2700
+Wire Wire Line
+	2450 2700 2550 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5E333C2A
+P 2550 2700
+F 0 "#PWR?" H 2550 2450 50  0001 C CNN
+F 1 "GND" H 2555 2527 50  0000 C CNN
+F 2 "" H 2550 2700 50  0001 C CNN
+F 3 "" H 2550 2700 50  0001 C CNN
+	1    2550 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3850 1800 3950
+$Comp
+L power:GND #PWR?
+U 1 1 5E334214
+P 1800 3950
+F 0 "#PWR?" H 1800 3700 50  0001 C CNN
+F 1 "GND" H 1805 3777 50  0000 C CNN
+F 2 "" H 1800 3950 50  0001 C CNN
+F 3 "" H 1800 3950 50  0001 C CNN
+	1    1800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J?
+U 1 1 5E3343F2
+P 4100 3450
+F 0 "J?" H 4180 3442 50  0000 L CNN
+F 1 "Screw_Terminal_01x04" H 4180 3351 50  0000 L CNN
+F 2 "" H 4100 3450 50  0001 C CNN
+F 3 "~" H 4100 3450 50  0001 C CNN
+	1    4100 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3350 3800 3350
+Wire Wire Line
+	3900 3550 3800 3550
+Wire Wire Line
+	3800 3550 3800 3350
+Wire Wire Line
+	2200 3000 3800 3000
+Connection ~ 3800 3350
+Wire Wire Line
+	3900 3450 3750 3450
+Wire Wire Line
+	3900 3650 3750 3650
+Wire Wire Line
+	3750 3650 3750 3450
+Wire Wire Line
+	2200 4000 3750 4000
+Connection ~ 3750 3650
+$Comp
+L Device:R_US R?
+U 1 1 5E3379C8
+P 2500 3300
+F 0 "R?" V 2295 3300 50  0000 C CNN
+F 1 "R_US" V 2386 3300 50  0000 C CNN
+F 2 "" V 2540 3290 50  0001 C CNN
+F 3 "~" H 2500 3300 50  0001 C CNN
+	1    2500 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5E337A5B
+P 2500 3750
+F 0 "R?" V 2295 3750 50  0000 C CNN
+F 1 "R_US" V 2386 3750 50  0000 C CNN
+F 2 "" V 2540 3740 50  0001 C CNN
+F 3 "~" H 2500 3750 50  0001 C CNN
+	1    2500 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2700 1800 3150
+Wire Wire Line
+	2200 3550 2200 3750
+Wire Wire Line
+	2200 3000 2200 3300
+Wire Wire Line
+	3800 3000 3800 3350
+Wire Wire Line
+	3750 3650 3750 4000
+Wire Wire Line
+	2200 3750 2350 3750
+Connection ~ 2200 3750
+Wire Wire Line
+	2200 3750 2200 4000
+Wire Wire Line
+	2350 3300 2200 3300
+Connection ~ 2200 3300
+Wire Wire Line
+	2200 3300 2200 3450
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5E33ED97
+P 2800 3500
+F 0 "JP?" V 2754 3548 50  0000 L CNN
+F 1 "Jumper_NO_Small" V 2650 3550 50  0000 L CNN
+F 2 "" H 2800 3500 50  0001 C CNN
+F 3 "~" H 2800 3500 50  0001 C CNN
+	1    2800 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 3300 2800 3300
+Wire Wire Line
+	2800 3300 2800 3400
+Wire Wire Line
+	2650 3750 2800 3750
+Wire Wire Line
+	2800 3750 2800 3600
+$Comp
+L Device:CP1_Small C?
+U 1 1 5E34055C
+P 3150 3750
+F 0 "C?" V 2922 3750 50  0000 C CNN
+F 1 "CP1_Small" V 3013 3750 50  0000 C CNN
+F 2 "" H 3150 3750 50  0001 C CNN
+F 3 "~" H 3150 3750 50  0001 C CNN
+	1    3150 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 3750 3050 3750
+Connection ~ 2800 3750
+$Comp
+L power:GND #PWR?
+U 1 1 5E3411BD
+P 3400 3750
+F 0 "#PWR?" H 3400 3500 50  0001 C CNN
+F 1 "GND" H 3405 3577 50  0000 C CNN
+F 2 "" H 3400 3750 50  0001 C CNN
+F 3 "" H 3400 3750 50  0001 C CNN
+	1    3400 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3750 3400 3750
+$Comp
+L Interface_CAN_LIN:MCP2515-xSO U?
+U 1 1 5E3433CA
+P 2600 5850
+F 0 "U?" H 2600 6828 50  0000 C CNN
+F 1 "MCP2515-xSO" H 2600 6737 50  0000 C CNN
+F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 2600 4950 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21801e.pdf" H 2700 5050 50  0001 C CNN
+	1    2600 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 5250 3350 5250
+Wire Wire Line
+	3200 5350 3350 5350
+Text GLabel 3350 5250 2    50   Input ~ 0
+CAN_RX
+Text GLabel 3350 5350 2    50   Input ~ 0
+CAN_TX
+Wire Wire Line
+	2000 5250 1850 5250
+Wire Wire Line
+	2000 5350 1850 5350
+Wire Wire Line
+	2000 5450 1850 5450
+Wire Wire Line
+	2000 5550 1850 5550
+Text GLabel 1850 5250 0    50   Input ~ 0
+SI
+$Sheet
+S 7350 950  950  500 
+U 5E34D5A5
+F0 "fuse_array" 50
+F1 "fuse_array.sch" 50
+$EndSheet
+$EndSCHEMATC

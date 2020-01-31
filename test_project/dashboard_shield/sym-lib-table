@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name dashboard_shield-rescue)(type Legacy)(uri ${KIPRJMOD}/dashboard_shield-rescue.lib)(options "")(descr ""))
+)

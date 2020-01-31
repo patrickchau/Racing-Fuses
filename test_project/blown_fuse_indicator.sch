@@ -1,0 +1,222 @@
+EESchema Schematic File Version 4
+LIBS:test_project-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BC558 Q?
+U 1 1 5E3118B1
+P 5700 3250
+AR Path="/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E31171B/5E3118B1" Ref="Q5"  Part="1" 
+AR Path="/5E31DE8F/5E3118B1" Ref="Q1"  Part="1" 
+AR Path="/5E31DEE1/5E3118B1" Ref="Q2"  Part="1" 
+AR Path="/5E31DEE9/5E3118B1" Ref="Q3"  Part="1" 
+AR Path="/5E31E086/5E3118B1" Ref="Q4"  Part="1" 
+AR Path="/5E31E08E/5E3118B1" Ref="Q6"  Part="1" 
+AR Path="/5E31E096/5E3118B1" Ref="Q7"  Part="1" 
+AR Path="/5E31E09E/5E3118B1" Ref="Q8"  Part="1" 
+AR Path="/5E34D5A5/5E34DC5F/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC67/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC6F/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC77/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC7F/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC87/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC8F/5E3118B1" Ref="Q?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC97/5E3118B1" Ref="Q?"  Part="1" 
+F 0 "Q?" H 5890 3204 50  0000 L CNN
+F 1 "BC558" H 5890 3295 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5900 3175 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC557.pdf" H 5700 3250 50  0001 L CNN
+	1    5700 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E3118B8
+P 6100 2850
+AR Path="/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E31171B/5E3118B8" Ref="D10"  Part="1" 
+AR Path="/5E31DE8F/5E3118B8" Ref="D2"  Part="1" 
+AR Path="/5E31DEE1/5E3118B8" Ref="D4"  Part="1" 
+AR Path="/5E31DEE9/5E3118B8" Ref="D6"  Part="1" 
+AR Path="/5E31E086/5E3118B8" Ref="D8"  Part="1" 
+AR Path="/5E31E08E/5E3118B8" Ref="D12"  Part="1" 
+AR Path="/5E31E096/5E3118B8" Ref="D14"  Part="1" 
+AR Path="/5E31E09E/5E3118B8" Ref="D16"  Part="1" 
+AR Path="/5E34D5A5/5E34DC5F/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC67/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC6F/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC77/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC7F/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC87/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC8F/5E3118B8" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC97/5E3118B8" Ref="D?"  Part="1" 
+F 0 "D?" V 6138 2733 50  0000 R CNN
+F 1 "LED" V 6047 2733 50  0000 R CNN
+F 2 "" H 6100 2850 50  0001 C CNN
+F 3 "~" H 6100 2850 50  0001 C CNN
+	1    6100 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 3000 6100 3250
+$Comp
+L Device:Fuse F?
+U 1 1 5E3118C0
+P 5850 2550
+AR Path="/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E31171B/5E3118C0" Ref="F5"  Part="1" 
+AR Path="/5E31DE8F/5E3118C0" Ref="F1"  Part="1" 
+AR Path="/5E31DEE1/5E3118C0" Ref="F2"  Part="1" 
+AR Path="/5E31DEE9/5E3118C0" Ref="F3"  Part="1" 
+AR Path="/5E31E086/5E3118C0" Ref="F4"  Part="1" 
+AR Path="/5E31E08E/5E3118C0" Ref="F6"  Part="1" 
+AR Path="/5E31E096/5E3118C0" Ref="F7"  Part="1" 
+AR Path="/5E31E09E/5E3118C0" Ref="F8"  Part="1" 
+AR Path="/5E34D5A5/5E34DC5F/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC67/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC6F/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC77/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC7F/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC87/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC8F/5E3118C0" Ref="F?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC97/5E3118C0" Ref="F?"  Part="1" 
+F 0 "F?" V 5653 2550 50  0000 C CNN
+F 1 "Fuse" V 5744 2550 50  0000 C CNN
+F 2 "" V 5780 2550 50  0001 C CNN
+F 3 "~" H 5850 2550 50  0001 C CNN
+	1    5850 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5900 3250 6100 3250
+Connection ~ 6100 3250
+$Comp
+L Device:R_US R?
+U 1 1 5E3118C9
+P 5600 3700
+AR Path="/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E31171B/5E3118C9" Ref="R9"  Part="1" 
+AR Path="/5E31DE8F/5E3118C9" Ref="R1"  Part="1" 
+AR Path="/5E31DEE1/5E3118C9" Ref="R3"  Part="1" 
+AR Path="/5E31DEE9/5E3118C9" Ref="R5"  Part="1" 
+AR Path="/5E31E086/5E3118C9" Ref="R7"  Part="1" 
+AR Path="/5E31E08E/5E3118C9" Ref="R11"  Part="1" 
+AR Path="/5E31E096/5E3118C9" Ref="R13"  Part="1" 
+AR Path="/5E31E09E/5E3118C9" Ref="R15"  Part="1" 
+AR Path="/5E34D5A5/5E34DC5F/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC67/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC6F/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC77/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC7F/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC87/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC8F/5E3118C9" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC97/5E3118C9" Ref="R?"  Part="1" 
+F 0 "R?" H 5668 3746 50  0000 L CNN
+F 1 "R_US" H 5668 3655 50  0000 L CNN
+F 2 "" V 5640 3690 50  0001 C CNN
+F 3 "~" H 5600 3700 50  0001 C CNN
+	1    5600 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3450 5600 3550
+Wire Wire Line
+	5600 3850 5600 3900
+Wire Wire Line
+	5600 3900 6100 3900
+Wire Wire Line
+	6100 3250 6100 3550
+$Comp
+L pspice:DIODE D?
+U 1 1 5E3118D4
+P 5600 2800
+AR Path="/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E31171B/5E3118D4" Ref="D9"  Part="1" 
+AR Path="/5E31DE8F/5E3118D4" Ref="D1"  Part="1" 
+AR Path="/5E31DEE1/5E3118D4" Ref="D3"  Part="1" 
+AR Path="/5E31DEE9/5E3118D4" Ref="D5"  Part="1" 
+AR Path="/5E31E086/5E3118D4" Ref="D7"  Part="1" 
+AR Path="/5E31E08E/5E3118D4" Ref="D11"  Part="1" 
+AR Path="/5E31E096/5E3118D4" Ref="D13"  Part="1" 
+AR Path="/5E31E09E/5E3118D4" Ref="D15"  Part="1" 
+AR Path="/5E34D5A5/5E34DC5F/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC67/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC6F/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC77/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC7F/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC87/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC8F/5E3118D4" Ref="D?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC97/5E3118D4" Ref="D?"  Part="1" 
+F 0 "D?" V 5554 2928 50  0000 L CNN
+F 1 "DIODE" V 5645 2928 50  0000 L CNN
+F 2 "" H 5600 2800 50  0001 C CNN
+F 3 "~" H 5600 2800 50  0001 C CNN
+	1    5600 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 3000 5600 3050
+Wire Wire Line
+	6100 2550 6100 2700
+Wire Wire Line
+	5700 2550 5600 2550
+Wire Wire Line
+	5600 2550 5600 2600
+Wire Wire Line
+	6000 2550 6100 2550
+Connection ~ 6100 2550
+$Comp
+L Device:R_US R?
+U 1 1 5E3118E2
+P 6100 3700
+AR Path="/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E31171B/5E3118E2" Ref="R10"  Part="1" 
+AR Path="/5E31DE8F/5E3118E2" Ref="R2"  Part="1" 
+AR Path="/5E31DEE1/5E3118E2" Ref="R4"  Part="1" 
+AR Path="/5E31DEE9/5E3118E2" Ref="R6"  Part="1" 
+AR Path="/5E31E086/5E3118E2" Ref="R8"  Part="1" 
+AR Path="/5E31E08E/5E3118E2" Ref="R12"  Part="1" 
+AR Path="/5E31E096/5E3118E2" Ref="R14"  Part="1" 
+AR Path="/5E31E09E/5E3118E2" Ref="R16"  Part="1" 
+AR Path="/5E34D5A5/5E34DC5F/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC67/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC6F/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC77/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC7F/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC87/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC8F/5E3118E2" Ref="R?"  Part="1" 
+AR Path="/5E34D5A5/5E34DC97/5E3118E2" Ref="R?"  Part="1" 
+F 0 "R?" H 6168 3746 50  0000 L CNN
+F 1 "R_US" H 6168 3655 50  0000 L CNN
+F 2 "" V 6140 3690 50  0001 C CNN
+F 3 "~" H 6100 3700 50  0001 C CNN
+	1    6100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3850 6100 3900
+Wire Wire Line
+	5600 3900 5600 4000
+Connection ~ 5600 3900
+Wire Wire Line
+	6100 2550 6250 2550
+Text HLabel 6250 2550 2    50   Input ~ 0
+12V
+Text HLabel 5450 4000 0    50   Input ~ 0
+GND
+Wire Wire Line
+	5450 4000 5600 4000
+$EndSCHEMATC
