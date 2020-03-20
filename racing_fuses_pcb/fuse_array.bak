@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:racing_fuses-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 14
+Sheet 2 20
 Title ""
 Date ""
 Rev ""

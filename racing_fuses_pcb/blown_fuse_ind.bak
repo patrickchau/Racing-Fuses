@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:racing_fuses-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 14
+Sheet 3 20
 Title ""
 Date ""
 Rev ""
@@ -86,9 +87,8 @@ Wire Wire Line
 Wire Wire Line
 	6200 3100 6200 3550
 Wire Wire Line
-	6200 2550 6200 2300
-Connection ~ 6200 2550
-Text HLabel 6200 2300 1    50   Input ~ 0
+	5250 2550 5000 2550
+Text HLabel 5000 2550 0    50   Input ~ 0
 12V
 $Comp
 L Device:R_US R1
@@ -114,7 +114,7 @@ AR Path="/5E336EA6/5E33A1FE/5E3373BC" Ref="R19"  Part="1"
 AR Path="/5E336EA6/5E33A206/5E3373BC" Ref="R21"  Part="1" 
 AR Path="/5E336EA6/5E33A20E/5E3373BC" Ref="R23"  Part="1" 
 F 0 "R23" H 5318 4146 50  0000 L CNN
-F 1 "R_US" H 5318 4055 50  0000 L CNN
+F 1 "470" H 5318 4055 50  0000 L CNN
 F 2 "" V 5290 4090 50  0001 C CNN
 F 3 "~" H 5250 4100 50  0001 C CNN
 	1    5250 4100
@@ -144,7 +144,7 @@ AR Path="/5E336EA6/5E33A1FE/5E337405" Ref="R20"  Part="1"
 AR Path="/5E336EA6/5E33A206/5E337405" Ref="R22"  Part="1" 
 AR Path="/5E336EA6/5E33A20E/5E337405" Ref="R24"  Part="1" 
 F 0 "R24" H 6268 4146 50  0000 L CNN
-F 1 "R_US" H 6268 4055 50  0000 L CNN
+F 1 "470k" H 6268 4055 50  0000 L CNN
 F 2 "" V 6240 4090 50  0001 C CNN
 F 3 "~" H 6200 4100 50  0001 C CNN
 	1    6200 4100
@@ -169,9 +169,8 @@ Wire Wire Line
 	5250 4450 5250 4650
 Connection ~ 5250 4450
 Wire Wire Line
-	5250 2550 5150 2550
-Connection ~ 5250 2550
-Text HLabel 5150 2550 0    50   Output ~ 0
+	6200 2550 6200 2450
+Text HLabel 6200 2450 1    50   Output ~ 0
 OUT
 $Comp
 L Diode:1N4148 D2
@@ -221,4 +220,6 @@ F 3 "~" H 5250 2950 50  0001 C CNN
 	1    5250 2950
 	0    -1   -1   0   
 $EndComp
+Connection ~ 6200 2550
+Connection ~ 5250 2550
 $EndSCHEMATC

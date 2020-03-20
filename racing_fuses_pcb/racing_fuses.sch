@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:racing_fuses-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 14
+Sheet 1 20
 Title ""
 Date ""
 Rev ""
@@ -146,7 +147,7 @@ L Device:R_US R25
 U 1 1 5E33DDB4
 P 8350 4850
 F 0 "R25" V 8145 4850 50  0000 C CNN
-F 1 "R_US" V 8236 4850 50  0000 C CNN
+F 1 "60" V 8236 4850 50  0000 C CNN
 F 2 "" V 8390 4840 50  0001 C CNN
 F 3 "~" H 8350 4850 50  0001 C CNN
 	1    8350 4850
@@ -157,7 +158,7 @@ L Device:R_US R26
 U 1 1 5E33DE05
 P 8350 5400
 F 0 "R26" V 8145 5400 50  0000 C CNN
-F 1 "R_US" V 8236 5400 50  0000 C CNN
+F 1 "60" V 8236 5400 50  0000 C CNN
 F 2 "" V 8390 5390 50  0001 C CNN
 F 3 "~" H 8350 5400 50  0001 C CNN
 	1    8350 5400
@@ -171,7 +172,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 4850 8700 4850
 Wire Wire Line
-	8700 4850 8700 5400
+	8700 4850 8700 5000
 Wire Wire Line
 	8700 5400 8500 5400
 Wire Wire Line
@@ -553,33 +554,25 @@ NoConn ~ 1550 3650
 NoConn ~ 1550 3750
 NoConn ~ 3650 3650
 NoConn ~ 3650 3750
-$Comp
-L dk_Automotive-Relays:JSM1-12V-5 RLY1
-U 1 1 5E474F26
-P 8350 1100
-F 0 "RLY1" H 8400 653 60  0000 C CNN
-F 1 "EFI_MAIN" H 8400 759 60  0000 C CNN
-F 2 "digikey-footprints:Relay_JSM1-12V-5" H 8550 1300 60  0001 L CNN
-F 3 "https://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Electric%20Works%20PDFs/JS-M_Series_Rev_Dec_2011.pdf" H 8550 1400 60  0001 L CNN
-F 4 "255-1240-ND" H 8550 1500 60  0001 L CNN "Digi-Key_PN"
-F 5 "JSM1-12V-5" H 8550 1600 60  0001 L CNN "MPN"
-F 6 "Relays" H 8550 1700 60  0001 L CNN "Category"
-F 7 "Automotive Relays" H 8550 1800 60  0001 L CNN "Family"
-F 8 "https://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Electric%20Works%20PDFs/JS-M_Series_Rev_Dec_2011.pdf" H 8550 1900 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/panasonic-electric-works/JSM1-12V-5/255-1240-ND/274764" H 8550 2000 60  0001 L CNN "DK_Detail_Page"
-F 10 "RELAY AUTOMOTIVE SPDT 15A 12V" H 8550 2100 60  0001 L CNN "Description"
-F 11 "Panasonic Electric Works" H 8550 2200 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 8550 2300 60  0001 L CNN "Status"
-	1    8350 1100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5900 900  6250 900 
 $Sheet
-S 9700 900  750  1800
+S 8100 800  750  1800
 U 5E4970C0
 F0 "relay_bank" 50
 F1 "relay_bank.sch" 50
+F2 "EFI_MAIN" I L 8100 900 50 
+F3 "EFI_CTRL" I L 8100 1050 50 
+F4 "FUEL_PUMP" I L 8100 1200 50 
+F5 "INJ_PWR" I L 8100 1350 50 
+F6 "FAN_PWR" I L 8100 1500 50 
+F7 "COIL_PWR" I L 8100 1650 50 
+F8 "GND" I R 8850 1050 50 
+F9 "EFI_SIG" I L 8100 1850 50 
+F10 "INJ_SIG" I L 8100 1950 50 
+F11 "PUMP_SIG" I L 8100 2050 50 
+F12 "FAN_SIG" I L 8100 2150 50 
+F13 "COIL_SIG" I L 8100 2250 50 
 $EndSheet
 Text GLabel 6250 900  2    50   Input ~ 0
 EFI_MAIN_PWR
@@ -637,20 +630,74 @@ Text GLabel 6250 2400 2    50   Input ~ 0
 AUX
 Text GLabel 6250 2550 2    50   Input ~ 0
 AUX_2
+NoConn ~ 1300 5550
+NoConn ~ 1300 5650
+NoConn ~ 1300 5750
+NoConn ~ 1300 5950
+NoConn ~ 1300 5850
+NoConn ~ 1300 6050
+NoConn ~ 1300 6150
+NoConn ~ 1300 6250
+NoConn ~ 1300 6350
+NoConn ~ 1300 6450
+NoConn ~ 1300 6550
+NoConn ~ 1300 6650
+NoConn ~ 1300 6750
+NoConn ~ 1300 6850
+NoConn ~ 1300 6950
+NoConn ~ 1300 7050
 Wire Wire Line
-	7950 900  7900 900 
+	8100 900  7950 900 
 Wire Wire Line
-	7950 1200 7900 1200
+	8100 1050 7950 1050
 Wire Wire Line
-	8650 900  8700 900 
+	8100 1200 7950 1200
 Wire Wire Line
-	8650 1200 8700 1200
-Text GLabel 7900 900  0    50   Input ~ 0
+	8100 1350 7950 1350
+Wire Wire Line
+	8100 1500 7950 1500
+Wire Wire Line
+	8100 1650 7950 1650
+Wire Wire Line
+	8850 1050 9000 1050
+$Comp
+L power:GND #PWR04
+U 1 1 5E6071B9
+P 9000 1050
+F 0 "#PWR04" H 9000 800 50  0001 C CNN
+F 1 "GND" H 9005 877 50  0000 C CNN
+F 2 "" H 9000 1050 50  0001 C CNN
+F 3 "" H 9000 1050 50  0001 C CNN
+	1    9000 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP2
+U 1 1 5E60825F
+P 8700 5100
+F 0 "JP2" V 8654 5148 50  0000 L CNN
+F 1 "Jumper_NO_Small" V 8745 5148 50  0000 L CNN
+F 2 "" H 8700 5100 50  0001 C CNN
+F 3 "~" H 8700 5100 50  0001 C CNN
+	1    8700 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8700 5200 8700 5400
+Text GLabel 7950 900  0    50   Input ~ 0
 EFI_MAIN_PWR
-Text GLabel 7900 1200 0    50   Input ~ 0
-EFI_PWR_RTN
-Text GLabel 8700 900  2    50   Input ~ 0
+Text GLabel 7950 1050 0    50   Input ~ 0
 EFI_CTRL_PWR
-Text GLabel 8700 1200 2    50   Output ~ 0
-EFI_CTRL_SIG
+Text GLabel 7950 1200 0    50   Input ~ 0
+PUMP_PWR
+Text GLabel 7950 1350 0    50   Input ~ 0
+INJ_PWR
+Text GLabel 7950 1500 0    50   Input ~ 0
+FAN_PWR
+Text GLabel 7950 1650 0    50   Input ~ 0
+COIL_PWR
+Wire Wire Line
+	8100 1850 8000 1850
+Wire Wire Line
+	8050 1950 8000 1950
 $EndSCHEMATC
